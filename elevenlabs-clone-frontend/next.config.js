@@ -12,6 +12,25 @@ const config = {
   typescript: {
     ignoreBuildErrors: true,
   },
+  async redirects() {
+    return [
+      {
+        source: "/",
+        destination: "/app/speech-synthesis/text-to-speech",
+        permanent: false,
+      },
+      {
+        source: "/sign-in",
+        destination: "/app/sign-in",
+        permanent: true,
+      },
+      {
+        source: "/sign-up",
+        destination: "/app/sign-up",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default config;
